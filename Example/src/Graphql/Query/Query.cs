@@ -3,6 +3,8 @@ using System.Linq;
 using Example.Abstractions;
 using Example.DataAccess;
 using System.Threading.Tasks;
+using HotChocolate.Data;
+using HotChocolate.Types;
 
 namespace Example.Graphql
 {
@@ -19,6 +21,9 @@ namespace Example.Graphql
             _bookingsRepository = bookingsRepository;
         }
 
+        [UsePaging]
+        [UseSorting]
+        [UseFiltering]
         public IQueryable<User> GetUsers()
         {
             return _userRepository.GetUsers();

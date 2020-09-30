@@ -1,33 +1,25 @@
+using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Example.Abstractions;
 using Example.DataAccess;
+using HotChocolate;
 using HotChocolate.Types;
+using HotChocolate.Types.Descriptors;
 
 namespace Example.Graphql
 {
-    public class UserType : ObjectType<User>
+    [ExtendObjectType(nameof(User))]
+    public class UserTypeExtension
     {
-        private IBookingsRepository _repository;
-
-        public UserType(IBookingsRepository repository)
+        public List<Booking> GetBookings(
+            [Service] IBookingsRepository repository,
+            [Parent] User user)
         {
-            _repository = repository;
-        }
-
-        protected override void Configure(IObjectTypeDescriptor<User> descriptor)
-        {
-            descriptor.Name("User");
-
-            descriptor.Field(x => x.Id).Type<NonNullType<IdType>>();
-            descriptor.Field(x => x.Name).Type<NonNullType<StringType>>();
-            descriptor.Field(x => x.Surname).Type<NonNullType<StringType>>();
-            descriptor.Field(x => x.UserName).Type<NonNullType<StringType>>();
-            descriptor.Field("bookings")
-                .Type<NonNullType<ListType<NonNullType<BookingType>>>>()
-                .Resolve(x => _repository
+            return repository
                     .GetBookings()
-                    .Where(b => b.UserId == x.Parent<User>().Id)
-                    .ToList());
+                    .Where(b => b.UserId == user.Id)
+                    .ToList();
         }
     }
 }

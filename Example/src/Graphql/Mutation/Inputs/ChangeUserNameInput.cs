@@ -1,4 +1,6 @@
 using System;
+using HotChocolate;
+using HotChocolate.Types;
 
 namespace Example.Graphql
 {
@@ -12,6 +14,7 @@ namespace Example.Graphql
             UserName = userName;
         }
 
+        [GraphQLType(typeof(IdType))]
         public Guid UserId { get; }
 
         public string UserName { get; }

@@ -23,12 +23,11 @@ namespace Example.Graphql
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<IBookingsRepository, BookingsRepository>();
             services.AddGraphQLServer()
-                .AddQueryType<QueryType>()
-                .AddMutationType<MutationType>()
-                .AddType<UserType>()
-                .AddType<BookingType>()
-                .AddType<ChangeUserNameInputType>()
-                .AddType<ChangeUserNamePayloadType>();
+                .AddQueryType<Query>()
+                .AddMutationType<Mutation>()
+                .AddType<UserTypeExtension>()
+                .AddFiltering()
+                .AddSorting();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
