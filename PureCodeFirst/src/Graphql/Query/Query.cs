@@ -3,35 +3,29 @@ using System.Linq;
 using Example.Abstractions;
 using Example.DataAccess;
 using System.Threading.Tasks;
+using HotChocolate;
 
 namespace Example.Graphql
 {
     public class Query
     {
-        private readonly IUserRepository _userRepository;
-        private readonly IBookingsRepository _bookingsRepository;
-
-        public Query(
-            IUserRepository userRepository,
-            IBookingsRepository bookingsRepository)
+        public IQueryable<User> GetUsers(
+            [Service] IUserRepository userRepository)
         {
-            _userRepository = userRepository;
-            _bookingsRepository = bookingsRepository;
+            return userRepository.GetUsers();
         }
 
-        public IQueryable<User> GetUsers()
+        public Task<User> GetUser(
+            [Service] IUserRepository userRepository,
+            Guid userId)
         {
-            return _userRepository.GetUsers();
+            return userRepository.GetUserAsync(userId);
         }
 
-        public Task<User> GetUser(Guid userId)
+        public IQueryable<Booking> GetBookings(
+            [Service] IBookingsRepository bookingsRepository)
         {
-            return _userRepository.GetUserAsync(userId);
-        }
-
-        public IQueryable<Booking> GetBookings()
-        {
-            return _bookingsRepository.GetBookings();
+            return bookingsRepository.GetBookings();
         }
     }
 }
