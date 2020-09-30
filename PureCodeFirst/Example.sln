@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CD3844C6-FC32-470D-BE74-6A24AE6EF929}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphql", "src\Graphql\Graphql.csproj", "{5AEC8026-FDCF-4821-8331-7CD4B60C0249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "src\DataAccess\DataAccess.csproj", "{21E541FD-901F-43AF-9AA5-316E5AF8D019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "src\Abstractions\Abstractions.csproj", "{810BA99E-0B41-42CE-A7AD-CF9C643E8899}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Debug|x64.Build.0 = Debug|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Debug|x86.Build.0 = Debug|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Release|x64.ActiveCfg = Release|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Release|x64.Build.0 = Release|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Release|x86.ActiveCfg = Release|Any CPU
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249}.Release|x86.Build.0 = Release|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Debug|x64.Build.0 = Debug|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Debug|x86.Build.0 = Debug|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Release|x64.ActiveCfg = Release|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Release|x64.Build.0 = Release|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Release|x86.ActiveCfg = Release|Any CPU
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019}.Release|x86.Build.0 = Release|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Debug|x64.Build.0 = Debug|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Debug|x86.Build.0 = Debug|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Release|x64.ActiveCfg = Release|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Release|x64.Build.0 = Release|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Release|x86.ActiveCfg = Release|Any CPU
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5AEC8026-FDCF-4821-8331-7CD4B60C0249} = {CD3844C6-FC32-470D-BE74-6A24AE6EF929}
+		{21E541FD-901F-43AF-9AA5-316E5AF8D019} = {CD3844C6-FC32-470D-BE74-6A24AE6EF929}
+		{810BA99E-0B41-42CE-A7AD-CF9C643E8899} = {CD3844C6-FC32-470D-BE74-6A24AE6EF929}
+	EndGlobalSection
+EndGlobal
